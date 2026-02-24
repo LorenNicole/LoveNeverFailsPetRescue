@@ -1,0 +1,258 @@
+@import "mixins-media-query";
+
+.home {
+
+	.hero-video-section {
+		height: calc(100vh - 66.4375px - 88.125px);
+	}
+
+	.hero-video {
+		height: 100%;
+		width: 100%;
+		background-color: #38583c;
+		margin-block-start: 0;
+
+		&__text {
+			opacity: 1;
+		}
+
+		&__cta {
+			.cta {	
+				opacity: .8 !important;
+				width: fit-content !important;
+
+				&:hover {
+					opacity: 1 !important;
+				}
+
+				a {
+					width: fit-content !important;
+				}
+			}
+		}
+	}
+
+    	.featured-pets {
+    		opacity: .8;
+    		background: var(--wp--preset--gradient--luminous-dusk) !important;
+    
+    		&__nav {
+    		   	.gutentor-module-tabs {
+    				&-item	{
+    					background: radial-gradient(#fcb900, #fff);
+    					margin-right: 0;
+    					text-align: center;
+    					display: grid;
+    					align-items: center;
+    					border-top-right-radius: 54px;
+                        border-top-left-radius: 64px;
+    
+    					&:hover	{
+    						background: white;
+    						color: #192a1b !important;
+    					}
+    
+    					&.gutentor-tabs-nav-active {
+    						background: white;
+    						border: solid 5px #38583c;
+    
+    						&:hover {
+    							background: white !important;
+    							border: solid 5px #38583c !important;
+    						}
+    					}
+    				}
+    
+    				&-title {
+    					color: #192a1b !important;
+    					font-weight: 900;
+    					letter-spacing: 2px;
+    				}
+    
+    				&-content.featured-pet-body {
+    					border: none !important;
+    					
+    					ul { 
+    					    grid-gap: unset !important;
+    					    margin-top: 0;
+    					     
+    					    li {
+    		                    border: none;
+    		                    padding-left: 0;
+    		                    padding-right: 0;
+    		                    
+    		                    .wp-block-woocommerce-product-image {
+    		                        padding: 0 1em;
+    		                    }
+    		                }
+    		                
+    		                .featured-pet-details {
+    		                    border: none;
+    	                        padding: 0;
+    		                    
+    		                    h2 {
+                                    margin: 0 0.75em !important;
+                                    
+    		                        a {
+    		                            color: white;
+    		                            margin-top: 0;
+    		                        }
+    		                    }
+    		                    
+    		                    figure {
+                                    padding: 1em;
+                                    
+                                    @include respond-to("md") {
+                                        border-left: 1px solid #999792;
+                                    }
+    		                    }
+    		                    
+    		                    .wc-block-components-product-button {
+    		                        margin: 1em 1em 0 !important;
+                                    
+                                     button {
+    		                            color: #38583c;
+    		                        }
+    		                    }
+    		                    
+    		                    .wp-block-table th {
+    		                        border: none;
+    		                    }
+    		                    
+    		                    table tbody {
+    		                        display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    color: white;
+                                    
+                                    th {
+                                        display: none;
+                                    }
+                                    
+                                    tr {
+                                        display: none;
+                                        
+                                        &:nth-of-type(1), &:nth-of-type(2) {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                        }
+                                    }
+                                    
+                                    td {
+                                        border: none;
+                                        padding-bottom: 0;
+                                        
+                                        p {
+                                            text-align: center;
+                                            font-size: 0.8em;
+                                        }
+                                    }
+    		                    }
+    		                }
+    					
+    					    li:first-of-type {
+    					        .featured-pet-details {
+    		                        border: none;
+    		                        
+    	                            h2, figure {
+                                        border-left: none;
+                                    }
+    				            }
+    	                    }
+    					}
+    				}
+    
+    				&-body {
+    					background-color: #38583c;
+    					border-bottom-right-radius: 54px;
+    					border-bottom-left-radius: 54px;
+    				}
+    
+    				&-nav {
+    					display: grid;
+    					grid-template-columns: repeat(2, 1fr);
+    					column-gap: 10px;
+    					row-gap: 10px;
+    
+    					@media (min-width: 992px) {
+    						grid-template-columns: repeat(4, 1fr);
+    						row-gap: unset;
+    					}
+    				}
+    
+    				.gutentor-tabs-content-active {
+    					border: none !important;
+    				}
+    			}
+    		}
+    	}
+    	
+    	.cta-container {
+    		a {
+    			width: 100%;
+    			padding: var(--wp--preset--spacing--20);
+    			border-radius: 9999px;
+    		}
+    	}
+    
+    	.wp-block-woocommerce-product-collection {
+	        margin-bottom: 0;
+		}
+
+	.available-pets-grid {
+		grid-template-columns: auto !important;
+		margin: 0 auto;
+		gap: 1em !important;
+
+		@media (min-width: 500px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+		}
+
+		@media (min-width: 1031px) {
+			grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+			gap: var(--wp--preset--spacing--80) !important;
+		}
+
+		&__pet-wrapper {
+			width: 70%;
+			margin: 0 auto !important;
+
+			@media (min-width: 1031px) {
+				width: 100%;
+				margin: unset;
+			}
+		}
+	}
+
+	// about
+	.transition-available-pets-to-about-us {
+		height: 150px;
+		background-image: linear-gradient(180deg, #fcb900, rgb(199, 81, 192));
+		margin-top: -1px;
+		margin-bottom: -2px;
+	}
+
+	.about-us-heading, .testimonial-sub-heading, .faq-sub-heading {
+		text-shadow: 0 2px black;
+	}
+	
+	.test-prev-next {
+	     
+	    figure {
+            img {
+                scale: 2;
+                
+                &:hover {
+                    scale: 3;
+                }
+            }
+	    }
+	}
+
+	.organization-name--about {
+		font-weight: 900;
+		font-size: 1em;
+	}
+
+}

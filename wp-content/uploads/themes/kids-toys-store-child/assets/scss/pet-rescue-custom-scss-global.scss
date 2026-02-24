@@ -1,0 +1,316 @@
+.paw-border {
+    display: none;
+
+	@media (min-width: 2160px) {
+        display: block;
+	}
+
+	&__right {
+		display: flex;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 2;
+		width: fit-content;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__left {
+		display: flex;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 2;
+		width: fit-content;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+header {
+	position: sticky;
+	top: 0;
+	z-index: 55;
+	width: 100%;
+	margin-bottom: -8px;
+	
+	.header-top-row .address-container__phone {
+	    &:hover {
+	        a {
+	            color: white !important;
+	        }
+	    }
+	}
+
+	.wp-block-site-title a {
+		background: radial-gradient(#fcb900, #fff);
+		padding: 0.25em;
+		border-radius: 10px;
+	}
+
+	.header-box-upper {
+		background-color: #38583c !important;
+	}
+
+	
+    .wp-block-navigation__responsive-container.is-menu-open {
+		@media screen and (max-width: 999px) {
+			background-color: #38583c !important;
+		}
+    }
+
+	.demo-notes-button-wrapper {
+		position: absolute;
+		top: 20px;
+		right: 10px;
+	}
+}
+
+footer {
+    .footer-content {
+        width: fit-content;
+        column-gap: 3em;
+        max-width: unset;
+        
+        .footer-col01 {
+            position: relative;
+            
+            p:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        .footer-column-1__header {
+            width: fit-content;
+            padding-top: 0;
+            
+            h1 {
+                padding-right: 0.5em;
+                align-self: flex-start;
+                
+                a {
+                    display: block;
+                    width: max-content;
+                }
+            }
+            
+            img {
+                position: relative;
+                top: -0.5em;
+                margin: 0 !important;
+                background-image: radial-gradient(#fff, transparent);
+                margin: 0.75em;
+                border-radius: 50%;
+                
+            }
+            
+             @media screen and (max-width: 767px) {
+                &:first-child {
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+            }
+        }   
+    
+        div {
+            flex-basis: content !important;
+            align-self: flex-start !important;
+        }
+    }
+}
+
+.woocommerce-store-notice.demo_store {
+	display: none !important;
+}
+
+.header-with-heart-icons {
+	&__grid {
+		justify-items: center;
+		width: max-content;
+		grid-template-columns: repeat(3, minmax(0, auto)) !important;
+
+		&-title {
+			padding: 0 0.5em;
+		}
+
+		&-icon {
+			img {
+				height: 4em;
+				width: auto;
+			}
+		}
+	}
+}
+
+
+.cta-container {
+    background: none !important;
+
+    &:hover {
+        background: black !important;
+        border-radius: 9999px;
+        opacity: 1 !important;
+        font-weight: 900;
+    }
+    
+    button, a {
+        background: var(--wp--preset--gradient--custom-cta) !important;
+        color: white !important;
+        font-weight: 500 !important;
+        border: none !important;
+        text-decoration: none !important;
+        
+    	&:hover {
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent;
+		}
+    }    
+}
+
+
+.available-pets-grid {
+	grid-template-columns: auto !important;
+	margin: 0 auto;
+	gap: 1em !important;
+
+	@media (min-width: 500px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+
+	@media (min-width: 1031px) {
+		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+		gap: var(--wp--preset--spacing--80) !important;
+		//padding-bottom: 0 !important;
+	}
+
+	&__pet-wrapper {
+		width: 70%;
+		margin: 0 auto !important;
+
+		@media (min-width: 1031px) {
+			width: 100%;
+			margin: unset;
+		}
+	}
+
+}
+	
+
+.available-pets-grid__text a {
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+
+  &:hover {
+	text-decoration: none;
+	padding: 0.5em;
+	background: white;
+  }
+}
+.available-pets-grid__text a::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.available-pets-grid__text a::before {
+    content: "";
+    background: linear-gradient(45deg, #ed6516, rgba(56, 88, 60, 0.7098039216), #ffcb70, #ffffff, #ed6516, #feca70, rgba(56, 88, 60, 0.7098039216));
+    position: absolute;
+    top: -8px;
+    left: -4px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.available-pets-grid__text a:hover::before {
+  opacity: 1;
+}
+
+.available-pets-grid__text a:active:after {
+  background: transparent;
+}
+
+.available-pets-grid__text a:active {
+  font-weight: bold;
+    padding: 0.5em;
+  outline: 3px solid black;
+
+}
+
+.wc-block-mini-cart__drawer {
+    .wc-block-components-product-price__value, .wc-block-mini-cart__footer-subtotal {
+        display: none;
+    }
+}
+
+// Demo Notes button
+.modal {
+    display: none !important;
+    position: fixed;
+    z-index: 1000;
+    width: 95vw;
+    height: 90vh;
+    background-color: #38583cba;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+     margin: auto;
+     padding: 20px;
+}
+.close {
+ color: black;
+ float: right;
+ font-size: 3em;
+ cursor: pointer;
+}
+
+.single-post {
+	.header-with-heart-icons {
+		&__grid {
+			background: radial-gradient(rgb(168 160 135) 10%, rgba(0, 123, 255, 0) 90%);
+		}
+	}
+}
+
+.copyright-text {
+	opacity: 0.9;
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
