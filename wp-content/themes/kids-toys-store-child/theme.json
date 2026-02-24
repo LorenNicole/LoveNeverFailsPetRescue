@@ -1,0 +1,161 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"color": "#000",
+					"gradient": "linear-gradient(135deg,rgb(56,88,60) 0%,rgba(57,89,61,0.63) 100%)",
+					"name": "Green",
+					"slug": "custom-green"
+				},
+				{
+					"gradient": "linear-gradient(175deg,rgb(252,185,0) 0%,rgb(155,81,224) 100%)",
+					"name": "OrangePurple",
+					"slug": "custom-orange-purple"
+				},
+				{
+					"gradient": "linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%)",
+					"name": "Color 1",
+					"slug": "custom-color-1"
+				}
+			],
+			"palette": [
+				{
+					"color": "#24108C",
+					"name": "Accent",
+					"slug": "accent"
+				},
+				{
+					"color": "#E69449",
+					"name": "Secaccent",
+					"slug": "secaccent"
+				},
+				{
+					"color": "#750F6C",
+					"name": "Thirdaccent",
+					"slug": "thirdaccent"
+				},
+				{
+					"color": "#9E0AF2",
+					"name": "Fourthaccent",
+					"slug": "fourthaccent"
+				},
+				{
+					"color": "#F3F3F3",
+					"name": "Fifthaccent",
+					"slug": "fifthaccent"
+				},
+				{
+					"color": "#fff",
+					"name": "Background",
+					"slug": "background"
+				},
+				{
+					"color": "#f5fafd",
+					"name": "Fourground",
+					"slug": "fourground"
+				},
+				{
+					"color": "#ebf3ff",
+					"name": "Secbackground",
+					"slug": "secbackground"
+				},
+				{
+					"color": "#000000",
+					"name": "primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#fff",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#121212",
+					"name": "tertiary",
+					"slug": "tertiary"
+				},
+				{
+					"color": "#39593d7d",
+					"name": "#38583c",
+					"slug": "custom-38583-c"
+				},
+				{
+					"color": "#9e0af2",
+					"name": "Purple",
+					"slug": "custom-purple"
+				},
+				{
+					"color": "#4158d0",
+					"name": "BlueGradient",
+					"slug": "custom-blue-gradient"
+				},
+				{
+					"color": "#c751c0",
+					"name": "PinkGradient",
+					"slug": "custom-pink-gradient"
+				},
+				{
+					"color": "#ffcb70",
+					"name": "OrangeGradient",
+					"slug": "custom-orange-gradient"
+				},
+				{
+					"color": "#38583c",
+					"name": "Dark Green Header",
+					"slug": "custom-dark-green-header"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"blockGap": "0",
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--30)",
+						"left": "var(--wp--preset--spacing--30)",
+						"right": "var(--wp--preset--spacing--30)",
+						"top": "var(--wp--preset--spacing--30)"
+					}
+				}
+			},
+			"core/paragraph": {
+				"spacing": {
+					"margin": {
+						"bottom": "0",
+						"top": "0"
+					},
+					"padding": {
+						"bottom": "0",
+						"top": "0"
+					}
+				}
+			},
+			"woocommerce/product-specifications": {
+				"css": "border-color: white;\n"
+			}
+		},
+		"elements": {
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			}
+		},
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--small)",
+			"fontStyle": "normal",
+			"fontWeight": "500",
+			"lineHeight": "1.5"
+		}
+	}
+}

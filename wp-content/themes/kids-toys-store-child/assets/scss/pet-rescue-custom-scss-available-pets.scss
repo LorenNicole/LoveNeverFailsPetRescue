@@ -1,0 +1,159 @@
+.available-pets-page {
+	main {
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+		background: linear-gradient(#38583c, rgb(36 16 140));
+		border-bottom: 1px solid white;
+	}
+
+	&__pet-list {
+		li {
+			border: none !important;
+
+			div {
+				border-radius: 15px;
+
+				div {
+					border-radius: 15px;
+				}
+			}
+		}
+	}
+
+	.wp-block-post-title {
+		font-size: 1em !important;
+		font-weight: 700;
+		margin-top: 0.5em !important;
+		padding: 0.5em;
+	}
+
+	.available-pets-page__pet-list {
+		margin-block-start: unset;
+	}
+
+	.product-specifications {
+		tr {
+			display: none;
+		}
+
+		.wp-block-product-specifications-item-attribute_pa_gender {
+			display: table-row;
+
+			.wp-block-product-specifications-item__label {
+					display: none;
+				}
+				.wp-block-product-specifications-item__value {
+					border: none;
+					font-size: 1rem;
+
+					p {
+						width: fit-content;
+						margin: 0 auto;
+					}
+				}
+		}
+
+		.wp-block-product-specifications-item-attribute_pa_age_cats {
+			display: table-row;
+
+			.wp-block-product-specifications-item__label {
+				display: none;
+			}
+			.wp-block-product-specifications-item__value {
+				border: none;
+				font-size: 1rem;
+
+				p {
+					width: fit-content;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.wp-block-product-specifications-item-attribute_pa_age_dogs {
+			display: table-row;
+
+			.wp-block-product-specifications-item__label {
+				display: none;
+			}
+			.wp-block-product-specifications-item__value {
+				border: none;
+				font-size: 1rem;
+
+				p {
+					width: fit-content;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	
+.wp-block-post-title {
+    margin-top: 1em !important;
+}	
+	
+.wp-block-post-title a {
+      border: none;
+      outline: none;
+      position: relative;
+      z-index: 0;
+      border-radius: 12px;
+      display: inline;
+    
+      &:hover {
+    	padding: 0.5em;
+    	background: white;
+    	text-decoration: none;
+      }
+}
+.wp-block-post-title a::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+}
+/* glow */
+.wp-block-post-title a::before {
+    content: "";
+    background: linear-gradient(45deg, #ed6516, rgba(56, 88, 60, 0.7098039216), #ffcb70, #ffffff, #ed6516, #feca70, rgba(56, 88, 60, 0.7098039216));
+    position: absolute;
+    top: -8px;
+    left: -4px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+      0% {background-position: 0 0;}
+      50% {background-position: 400% 0;}
+      100% {background-position: 0 0;}
+}
+
+/* hover */
+.wp-block-post-title a:hover::before {
+    opacity: 1;
+}
+
+.wp-block-post-title a:active:after {
+    background: transparent;
+}
+
+.wp-block-post-title a:active {
+    font-weight: bold;
+    padding: 0.5em;
+    outline: 3px solid black;
+
+}
+
+}

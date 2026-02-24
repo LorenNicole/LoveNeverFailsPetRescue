@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Brown",
+  "version": 2,
+  "settings": {
+    "color": {
+		"palette": [
+			{
+				"color": "#003133",
+				"name": "Accent",
+				"slug": "accent"
+			},
+			{
+				"color": "#E64949",
+				"name": "Secaccent",
+				"slug": "secaccent"
+			},
+			{
+				"color": "#8B0051",
+				"name": "Thirdaccent",
+				"slug": "thirdaccent"
+			},
+			{
+				"color": "#0070A8",
+				"name": "Fourthaccent",
+				"slug": "fourthaccent"
+			},
+			{
+				"color": "#F3F3F3",
+				"name": "Fifthaccent",
+				"slug": "fifthaccent"
+			},
+			{
+				"color": "#fff",
+				"name": "Background",
+				"slug": "background"
+			},
+			{
+				"color": "#f5fafd",
+				"name": "Fourground",
+				"slug": "fourground"
+			},
+			{
+				"color": "#ebf3ff",
+				"name": "Secbackground",
+				"slug": "secbackground"
+			},
+			{
+				"color": "#000000",
+				"name": "primary",
+				"slug": "primary"
+			},
+			{
+				"color": "#fff",
+				"name": "Secondary",
+				"slug": "secondary"
+			},
+			{
+				"color": "#121212",
+				"name": "tertiary",
+				"slug": "tertiary"
+			}
+		]
+    }
+  }
+}
